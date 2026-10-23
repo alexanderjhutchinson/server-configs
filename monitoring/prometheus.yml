@@ -14,3 +14,11 @@ scrape_configs:
   - job_name: 'cadvisor'
     static_configs:
       - targets: ['cadvisor:8080']
+
+  - job_name: alex-cloud-gaming-node
+    static_configs:
+      - targets: ["100.72.245.120:9100"]
+
+  - job_name: alex-cloud-gaming-cadvisor
+    static_configs:
+      - targets: ["100.72.245.120:8080"]
