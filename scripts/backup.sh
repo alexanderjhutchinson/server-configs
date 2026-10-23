@@ -3,7 +3,8 @@
 set -euo pipefail
 
 # --- config ---
-export RESTIC_REPOSITORY="rest:http://alex-cloud-gaming:8000/alex-cloud"
+set -a; source /root/.restic-env; set +a
+export RESTIC_CACHE_DIR="/root/.cache/restic"
 export RESTIC_PASSWORD_FILE="/root/.restic-password"
 STAGING="/srv/backup-staging"
 
