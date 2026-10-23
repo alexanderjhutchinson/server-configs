@@ -1,0 +1,10 @@
+[Unit]
+Description=Run alex-cloud backup weekly
+
+[Timer]
+OnCalendar=Sun *-*-* 04:00:00 America/New_York
+Persistent=true
+RandomizedDelaySec=15min
+
+[Install]
+WantedBy=timers.target
