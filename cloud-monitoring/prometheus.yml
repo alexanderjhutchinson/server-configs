@@ -6,19 +6,29 @@ scrape_configs:
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']
+      labels:
+        host: alex-cloud
 
   - job_name: 'node-exporter'
     static_configs:
       - targets: ['node-exporter:9100']
+      labels:
+        host: alex-cloud
 
   - job_name: 'cadvisor'
     static_configs:
       - targets: ['cadvisor:8080']
+      labels:
+        host: alex-cloud
 
   - job_name: alex-cloud-gaming-node
     static_configs:
       - targets: ["100.72.245.120:9100"]
+      labels:
+        host: alex-cloud-gaming
 
   - job_name: alex-cloud-gaming-cadvisor
     static_configs:
       - targets: ["100.72.245.120:8080"]
+      labels:
+        host: alex-cloud-gaming
